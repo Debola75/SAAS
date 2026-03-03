@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="asset/billing.css">
+    <link rel="stylesheet" href="asset/main.css">
+    <title>SaaS Billing Dashboard</title>
+
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar" id="sidebar">
+            <div class="logo">⚡ DashHub</div>
+            <nav>
+                <a href="index.html"><div class="nav-item">📊 Dashboard</div></a>
+                <div class="nav-item">👥 User</div>
+                <div class="nav-item active">💳 Billing</div>
+                <a href="report.html"><div class="nav-item">📝 Reports</div></a>
+            </nav>
+        </div>
+
+        <div class="main">
+            <header>
+                <div class="logo">💳 <span>BillingHub</span></div>
+                <button class="menu-toggle" id="menuToggle">☰ Menu</button>
+            </header>
+
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <div class="kpi-label">Monthly Recurring Revenue</div>
+                    <div class="kpi-value">$24.5K</div>
+                    <div class="kpi-change">↑ 12.5% vs last month</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-label">Annual Run Rate</div>
+                    <div class="kpi-value">$294K</div>
+                    <div class="kpi-change">↑ 8.3% vs last year</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-label">Churn Rate</div>
+                    <div class="kpi-value">2.1%</div>
+                    <div class="kpi-change negative">↑ 0.5% vs last month</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-label">Active Subscriptions</div>
+                    <div class="kpi-value">1,247</div>
+                    <div class="kpi-change">↑ 125 new subscribers</div>
+                </div>
+            </div>
+
+            <h2 class="section-title">Subscription Plans</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="plan-name">Basic</div>
+                    <div class="plan-price">$29<span>/mo</span></div>
+                    <div class="plan-description">Perfect for getting started</div>
+                    <ul class="plan-features">
+                        <li>Up to 1,000 users</li>
+                        <li>5 GB storage</li>
+                        <li>Basic analytics</li>
+                        <li>Email support</li>
+                    </ul>
+                    <button class="btn btn-secondary">View Details</button>
+                </div>
+
+                <div class="pricing-card active">
+                    <div class="badge">POPULAR</div>
+                    <div class="plan-name">Pro</div>
+                    <div class="plan-price">$99<span>/mo</span></div>
+                    <div class="plan-description">Best for growing teams</div>
+                    <ul class="plan-features">
+                        <li>Up to 10,000 users</li>
+                        <li>500 GB storage</li>
+                        <li>Advanced analytics</li>
+                        <li>Priority support</li>
+                        <li>API access</li>
+                    </ul>
+                    <button class="btn btn-primary">Upgrade Now</button>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="plan-name">Enterprise</div>
+                    <div class="plan-price">Custom</div>
+                    <div class="plan-description">Unlimited scale & support</div>
+                    <ul class="plan-features">
+                        <li>Unlimited users</li>
+                        <li>Unlimited storage</li>
+                        <li>Custom analytics</li>
+                        <li>24/7 dedicated support</li>
+                        <li>Full API access</li>
+                        <li>SLA guarantee</li>
+                    </ul>
+                    <button class="btn btn-secondary">Contact Sales</button>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div>
+                    <h2 class="section-title">Revenue Analytics</h2>
+                    <div class="chart-container">
+                        <img src="img/39168259e952aed4eb716f2e1fcee2bd-removebg-preview.png" alt="📊 Revenue Chart Placeholder" width="380px">
+                    </div>
+                </div>
+                <div>
+                    <h2 class="section-title">Growth Metrics</h2>
+                    <div class="chart-container">
+                        <img src="img/26b37dcd37c2a46cb45a02f718f0ce81-removebg-preview.png" width="380px" >
+                    </div>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div>
+                    <h2 class="section-title">Invoice History</h2>
+                    <div class="invoice-section">
+                        <table class="invoice-table">
+                            <thead>
+                                <tr>
+                                    <th>Invoice</th>
+                                    <th>Date</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#INV-2024-001</td>
+                                    <td>Jan 1, 2024</td>
+                                    <td>$99.00</td>
+                                    <td><span class="status-badge status-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#INV-2024-002</td>
+                                    <td>Feb 1, 2024</td>
+                                    <td>$99.00</td>
+                                    <td><span class="status-badge status-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#INV-2024-003</td>
+                                    <td>Mar 1, 2024</td>
+                                    <td>$99.00</td>
+                                    <td><span class="status-badge status-pending">Pending</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="section-title">Payment Methods</h2>
+                    <div class="payment-section">
+                        <div class="payment-methods">
+                            <div class="payment-card active">
+                                <div class="card-info">
+                                    <div class="card-icon">💳</div>
+                                    <div class="card-details">
+                                        <div class="card-number">•••• •••• •••• 4242</div>
+                                        <div class="card-expiry">Expires 12/2026</div>
+                                    </div>
+                                </div>
+                                <div style="font-size: 12px; color: #4ade80;">Default</div>
+                            </div>
+                            <div class="payment-card">
+                                <div class="card-info">
+                                    <div class="card-icon">💳</div>
+                                    <div class="card-details">
+                                        <div class="card-number">•••• •••• •••• 5555</div>
+                                        <div class="card-expiry">Expires 08/2025</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-secondary">+ Add Payment Method</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="asset/analy.js"></script>
+    <script src="asset/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html>

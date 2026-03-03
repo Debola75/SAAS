@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="asset/index.css">
+    <link rel="shortcut icon" href="img/logo-removebg-preview.png" type="image/x-icon">
+    <title>DashHub</title>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar" id="sidebar">
+            <div class="logo">⚡ DashHub</div>
+            <nav>
+                <div class="nav-item active">📊 Dashboard</div>
+                <div class="nav-item">👥 User</div>
+                <a href="billing.html"><div class="nav-item">💳 Billing</div></a>
+                <a href="report.html"><div class="nav-item">📝 Reports</div></a>
+            </nav>
+        </div>
+
+        <div class="main">
+            <div class="header">
+                <h1 class="header-title">Dashboard</h1>
+                <button class="menu-toggle" id="menuToggle">☰ Menu</button>
+                <div class="header-actions">
+                    <span>🔔</span>
+                    <span>👤</span>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="grid">
+                    <div class="kpi-card">
+                        <div class="kpi-label">Revenue</div>
+                        <div class="kpi-value">$124.5K</div>
+                        <div class="kpi-change">↑ 12.5% vs last month</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-label">Active Users</div>
+                        <div class="kpi-value">8.2K</div>
+                        <div class="kpi-change">↑ 8.2% vs last month</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-label">Conversion Rate</div>
+                        <div class="kpi-value">3.8%</div>
+                        <div class="kpi-change">↑ 0.3% vs last month</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-label">Total Orders</div>
+                        <div class="kpi-value">2,456</div>
+                        <div class="kpi-change">↑ 15.1% vs last month</div>
+                    </div>
+                </div>
+
+                <div class="charts-grid">
+                    <div class="chart-card">
+                        <div class="chart-title">Revenue Trend</div>
+                        <div class="chart-bars">
+                            <div class="bar" style="height: 40%;"></div>
+                            <div class="bar" style="height: 55%;"></div>
+                            <div class="bar" style="height: 65%;"></div>
+                            <div class="bar" style="height: 75%;"></div>
+                            <div class="bar" style="height: 85%;"></div>
+                            <div class="bar" style="height: 95%;"></div>
+                            <div class="bar" style="height: 100%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="chart-card">
+                        <div class="chart-title">User Growth</div>
+                        <div class="chart-bars">
+                            <div class="bar" style="height: 30%;"></div>
+                            <div class="bar" style="height: 50%;"></div>
+                            <div class="bar" style="height: 45%;"></div>
+                            <div class="bar" style="height: 70%;"></div>
+                            <div class="bar" style="height: 80%;"></div>
+                            <div class="bar" style="height: 90%;"></div>
+                            <div class="bar" style="height: 100%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebar = document.getElementById('sidebar');
+
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', function() {
+                document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
+                this.classList.add('active');
+                if (window.innerWidth <= 768) {
+                    sidebar.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
